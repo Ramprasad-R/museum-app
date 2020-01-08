@@ -16,10 +16,9 @@ main {
     max-height: 20rem;
     margin: 1rem
   }
-
   #gallery {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
   }
