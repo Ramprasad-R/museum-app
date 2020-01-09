@@ -11,5 +11,8 @@ function submitComment(){
     commentDiv.classList.add("section");
     commentDiv.appendChild(commentH2);
     commentDiv.appendChild(commentP);
-    console.log(commentDiv);
+    const commentSection = document.getElementById("comment");
+    commentSection.appendChild(commentDiv);
+    getName.value="";
+    getMessage.value="";
 }
