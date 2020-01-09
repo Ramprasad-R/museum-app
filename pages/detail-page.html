@@ -12,27 +12,32 @@
 
 <body>
     <main>
+
         <h4>Ramprasad's Museum App</h4>
         <h2>The painter on his way to Work by Vincent Van Gogh</h2>
         <img class="artObject"
             src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/1-the-painter-on-his-way-to-work-vincent-van-gogh.jpg"
             alt="Gallery Image1">
+        <section id="comment"></section>
         <h2>Comments</h2>
         <h4>Jan said:</h4>
         <p>"This is an awesome painting by Vincent Van Gogh"</p>
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
-        <br>
-        <label for="message">Message:</label>
-        <textarea name="message" id="message" cols="30" rows="2"></textarea>
-        <br>
-        <button>Post your comments</button>
+        <form action="">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="2"></textarea>
+            </div>
+            <button>Post your comments</button>
+        </form>
+        </section>
     </main>
     <footer>
         <p>Made with ❤ at Codaisseur</p>
     </footer>
-
-
 </body>
 
 </html>
