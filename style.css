@@ -1,5 +1,7 @@
 body {
   background-color: #FFBA00;
+  font-family: 'Inconsolata', monospace;
+    text-align: center;
 }
 main {
   background: white;
