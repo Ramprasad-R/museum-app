@@ -1,10 +1,25 @@
 function submitComment() {
+    function capitalizeFirstLetter(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
     const getName = document.getElementById("name");
-    const name = getName.value;
+    const name = capitalizeFirstLetter(getName.value);
     const getMessage = document.getElementById("message");
     const message = getMessage.value;
-    
+
     const messageValidation = (name, message) => {
+        if (!name) {
+            alert("Enter your Name!")
+            return null
+        }
+        if (!message) {
+            alert("Comment cannot be empty!")
+            return null
+        }
+        if (message.length > 280) {
+            alert("Your comment is too long!");
+            return null;
+        }
         if (name && message) {
             const commentDiv = document.createElement("div");
             const commentH2 = document.createElement("h4");
@@ -20,12 +35,8 @@ function submitComment() {
             getMessage.value = "";
             return true;
         }
-        if (message.length > 280) {
-            alert("Your comment is too long!");
-            return null;
-        }
         alert("Name and message cannot be empty!")
         return null;
     }
-    messageValidation(name,message);
+    messageValidation(name, message);
 }
