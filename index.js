@@ -329,16 +329,22 @@ const a_href = "./pages/detail-page.html";
 const imageClass = "artObject";
 const gallery = document.getElementById("gallery")
 for (let i = 0; i < painting.length; i++) {
-    const imageDiv = document.createElement("div");
-    const imageAnchor = document.createElement("a");
-    const image = document.createElement("img");
-    const imageAltText = painting[i].title;
-    const imageUrl = painting[i].webImage.url;
-    image.setAttribute("class", "artObject");
-    image.setAttribute("alt", imageAltText);
-    image.setAttribute("src", imageUrl);
-    imageAnchor.setAttribute("href", a_href);
-    imageAnchor.appendChild(image);
-    imageDiv.appendChild(imageAnchor);
-    gallery.appendChild(imageDiv);
+    if (painting[i].webImage.width >= 1500) {
+        const findCreatorHonthorst = painting[i].longTitle.search("Honthorst");
+        const findCreationYear = painting[i].longTitle.match(/\d+/)[0];
+        if (findCreatorHonthorst === -1 && findCreationYear < 1800) {
+            const imageDiv = document.createElement("div");
+            const imageAnchor = document.createElement("a");
+            const image = document.createElement("img");
+            const imageAltText = painting[i].title;
+            const imageUrl = painting[i].webImage.url;
+            image.setAttribute("class", "artObject");
+            image.setAttribute("alt", imageAltText);
+            image.setAttribute("src", imageUrl);
+            imageAnchor.setAttribute("href", a_href);
+            imageAnchor.appendChild(image);
+            imageDiv.appendChild(imageAnchor);
+            gallery.appendChild(imageDiv);
+        }
+    }
 }
