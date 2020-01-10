@@ -1,3 +1,13 @@
+const getUrl = window.location.href
+const url = new URL(getUrl);
+const detailsImageUrl = url.searchParams.get("detailsImageUrl");
+const imageTitle = url.searchParams.get("imageTitle");
+const imageTitleHeading = document.getElementById("details-title");
+const imageSrc = document.getElementById("details-image");
+imageTitleHeading.innerText = imageTitle;
+imageSrc.setAttribute("src",detailsImageUrl);
+imageSrc.setAttribute("alt", imageTitle);
+
 function submitComment() {
     function capitalizeFirstLetter(str) {
         return str.charAt(0).toUpperCase() + str.slice(1);
