@@ -15,30 +15,31 @@
 
         <h4>Ramprasad's Museum App</h4>
         <section id="detail-page">
-        <h2 id="details-title">Een vrolijke vioolspeler</h2>
-        <img id="details-image" class="artObject"
-            src="https://lh3.googleusercontent.com/V3sjNgCA_Jssjm0sTKaPZeOwCv_vAPpjllrAF-yAB8UkqIlc6UX_jxJmxH_axVHTHxlK1E7Slecg8K5bIvSbDlw0zg"
-            alt="Een vrolijke vioolspeler">
+            <h2 id="details-title">Een vrolijke vioolspeler</h2>
+            <img id="details-image" class="artObject"
+                src="https://lh3.googleusercontent.com/V3sjNgCA_Jssjm0sTKaPZeOwCv_vAPpjllrAF-yAB8UkqIlc6UX_jxJmxH_axVHTHxlK1E7Slecg8K5bIvSbDlw0zg"
+                alt="Een vrolijke vioolspeler">
         </section>
         <h2>Comments</h2>
         <section id="comment">
-            <div>
+            <div class="comment-section">
                 <h4>Jan said:</h4>
                 <p>"This is awesome"</p>
             </div>
         </section>
-        <form onsubmit="submitComment(); return false">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div>
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" cols="30" rows="2"></textarea>
-            </div>
-            <button type="submit">Post your comments</button>
-        </form>
-
+        <section class="form-section">
+            <form onsubmit="submitComment(); return false">
+                <div class="form-element">
+                    <label class="form-element" for="name">Name:</label>
+                    <input class="form-element" type="text" name="name" id="name">
+                </div>
+                <div class="form-element">
+                    <label class="form-element" for="message">Message:</label>
+                    <textarea class="form-element" name="message" id="message" cols="30" rows="2"></textarea>
+                </div>
+                <button class="btn" type="submit">Post your comments</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>Made with ❤ at Codaisseur</p>
