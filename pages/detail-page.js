@@ -36,7 +36,7 @@ function submitComment() {
             const commentP = document.createElement("p");
             commentH2.innerText = `${name} said:`;
             commentP.innerText = message;
-            commentDiv.classList.add("section");
+            commentDiv.classList.add("comment-section");
             commentDiv.appendChild(commentH2);
             commentDiv.appendChild(commentP);
             const commentSection = document.getElementById("comment");
